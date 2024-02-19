@@ -23,7 +23,7 @@ export class PurController {
     }
     this.cacheService.save(cacheKey, [...showedAnimals, urlPath]);
 
-    return urlPath;
+    return [{ url: urlPath }];
   }
 
   private async getImageUrl(hostUrl, publishedUrls): Promise<string> {
