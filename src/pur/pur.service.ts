@@ -17,6 +17,6 @@ export class PurService {
   };
   public getAnimalUrl = async (host) => {
     const urlPath = await this.getCatFile();
-    return `${process.env.PROTOCOL}://${host}/img/${urlPath}`;
+    return `${process.env.PROTOCOL}://${host}/${urlPath}`;
   };
 }
