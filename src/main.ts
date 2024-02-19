@@ -7,7 +7,7 @@ dotenv.config();
 async function bootstrap() {
   const app = await NestFactory.create<NestExpressApplication>(AppModule);
   app.enableCors();
-  app.useStaticAssets(join(__dirname, '/../public/img'));
+  app.useStaticAssets(join(__dirname, '/../public'));
   await app.listen(3000);
 }
 bootstrap();
